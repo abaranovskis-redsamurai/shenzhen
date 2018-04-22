@@ -1,0 +1,28 @@
+<!--
+ Copyright (c) 2014, 2017, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-hybrid-padding">
+  <oj-chart
+      type="scatter"
+      selection-mode="multiple"
+      series="[[xySeriesValue]]"
+      groups="[[xyGroupsValue]]"
+      animation-on-display="auto"
+      hover-behavior="dim"
+      legend.position="bottom"
+      y-axis="[[yAxisData]]"
+      hide-and-show-behavior="withRescale"
+      style-defaults.marker-displayed="on"
+      style="width:100%;height:450px;">
+  </oj-chart>
+  <div class="oj-panel oj-margin">
+    <oj-form-layout label-edge="top" max-columns="3">
+      <oj-input-text id="it1" value="{{trainingepochs}}" label-hint="Training Epochs"></oj-input-text>
+      <oj-input-text id="it2" value="{{learningrate}}" label-hint="Learning rate"></oj-input-text>
+      <oj-input-text id="it4" value="[[wRes]]" disabled="true" label-hint="W"></oj-input-text>
+      <oj-input-text id="it3" value="[[cost]]" disabled="true" label-hint="Cost"></oj-input-text>
+    </oj-form-layout>
+    <oj-button id='bt1' on-click='[[callTrainModel]]'>Train</oj-button>
+  </div>
+</div>
