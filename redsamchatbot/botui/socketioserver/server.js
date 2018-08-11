@@ -31,6 +31,7 @@ io.sockets.on("connection",function(socket) {
         if(Buffer.isBuffer(data)) {
           data = JSON.parse(data);
         }
+
         var intents = list_of_intents.intents;
         var responseMsg;
         var responseContext;
